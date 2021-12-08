@@ -1,0 +1,668 @@
+2021-12-01 17:42:26 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:W:/CTD/Backend/PICTDBE/ProjetoIntegrador/data/vapordevalvulaepica.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.message.DbException.convert(DbException.java:347)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:93)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2877)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:481)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:402)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:3579)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:170)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:103)
+	at org.h2.engine.Database.getPageStore(Database.java:2659)
+	at org.h2.engine.Database.open(Database.java:675)
+	at org.h2.engine.Database.openDatabase(Database.java:307)
+	at org.h2.engine.Database.<init>(Database.java:301)
+	at org.h2.engine.Engine.openSession(Engine.java:74)
+	at org.h2.engine.Engine.openSession(Engine.java:192)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:171)
+	at org.h2.engine.Engine.createSession(Engine.java:166)
+	at org.h2.engine.Engine.createSession(Engine.java:29)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:340)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.access$100(HikariPool.java:71)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:726)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:712)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.IllegalStateException: The file is locked: nio:W:/CTD/Backend/PICTDBE/ProjetoIntegrador/data/vapordevalvulaepica.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 33 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:W:/CTD/Backend/PICTDBE/ProjetoIntegrador/data/vapordevalvulaepica.mv.db [1.4.200/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:950)
+	at org.h2.mvstore.FileStore.open(FileStore.java:166)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:381)
+	... 27 more
+Caused by: java.nio.channels.OverlappingFileLockException
+	at java.base/sun.nio.ch.FileLockTable.checkList(FileLockTable.java:229)
+	at java.base/sun.nio.ch.FileLockTable.add(FileLockTable.java:123)
+	at java.base/sun.nio.ch.FileChannelImpl.tryLock(FileChannelImpl.java:1297)
+	at org.h2.store.fs.FileNio.tryLock(FilePathNio.java:121)
+	at java.base/java.nio.channels.FileChannel.tryLock(FileChannel.java:1191)
+	at org.h2.mvstore.FileStore.open(FileStore.java:163)
+	... 28 more
+2021-12-01 17:42:26 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:W:/CTD/Backend/PICTDBE/ProjetoIntegrador/data/vapordevalvulaepica.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.message.DbException.convert(DbException.java:347)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:93)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2877)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:481)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:402)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:3579)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:170)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:103)
+	at org.h2.engine.Database.getPageStore(Database.java:2659)
+	at org.h2.engine.Database.open(Database.java:675)
+	at org.h2.engine.Database.openDatabase(Database.java:307)
+	at org.h2.engine.Database.<init>(Database.java:301)
+	at org.h2.engine.Engine.openSession(Engine.java:74)
+	at org.h2.engine.Engine.openSession(Engine.java:192)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:171)
+	at org.h2.engine.Engine.createSession(Engine.java:166)
+	at org.h2.engine.Engine.createSession(Engine.java:29)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:340)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.access$100(HikariPool.java:71)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:726)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:712)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.IllegalStateException: The file is locked: nio:W:/CTD/Backend/PICTDBE/ProjetoIntegrador/data/vapordevalvulaepica.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 33 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:W:/CTD/Backend/PICTDBE/ProjetoIntegrador/data/vapordevalvulaepica.mv.db [1.4.200/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:950)
+	at org.h2.mvstore.FileStore.open(FileStore.java:166)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:381)
+	... 27 more
+Caused by: java.nio.channels.OverlappingFileLockException
+	at java.base/sun.nio.ch.FileLockTable.checkList(FileLockTable.java:229)
+	at java.base/sun.nio.ch.FileLockTable.add(FileLockTable.java:123)
+	at java.base/sun.nio.ch.FileChannelImpl.tryLock(FileChannelImpl.java:1297)
+	at org.h2.store.fs.FileNio.tryLock(FilePathNio.java:121)
+	at java.base/java.nio.channels.FileChannel.tryLock(FileChannel.java:1191)
+	at org.h2.mvstore.FileStore.open(FileStore.java:163)
+	... 28 more
+2021-12-03 09:35:06 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "TITULO" not found; SQL statement:
+INSERT INTO categoria (titulo) VALUES ('jogo') [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:703)
+	at org.h2.command.Parser.parseColumn(Parser.java:1450)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1435)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1804)
+	at org.h2.command.Parser.parseInsert(Parser.java:1749)
+	at org.h2.command.Parser.parsePrepared(Parser.java:954)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp.query(WebApp.java:1092)
+	at org.h2.server.web.WebApp.process(WebApp.java:241)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:173)
+	at org.h2.server.web.WebServlet.doGet(WebServlet.java:129)
+	at org.h2.server.web.WebServlet.doPost(WebServlet.java:166)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2021-12-03 09:35:18 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "TITULO" not found; SQL statement:
+INSERT INTO categoria (TITULO) VALUES ('jogo') [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:703)
+	at org.h2.command.Parser.parseColumn(Parser.java:1450)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1435)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1804)
+	at org.h2.command.Parser.parseInsert(Parser.java:1749)
+	at org.h2.command.Parser.parsePrepared(Parser.java:954)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp.query(WebApp.java:1092)
+	at org.h2.server.web.WebApp.process(WebApp.java:241)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:173)
+	at org.h2.server.web.WebServlet.doGet(WebServlet.java:129)
+	at org.h2.server.web.WebServlet.doPost(WebServlet.java:166)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2021-12-03 09:35:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "TITULO" not found; SQL statement:
+INSERT INTO categoria (TITULO ) VALUES ('jogo') [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:703)
+	at org.h2.command.Parser.parseColumn(Parser.java:1450)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1435)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1804)
+	at org.h2.command.Parser.parseInsert(Parser.java:1749)
+	at org.h2.command.Parser.parsePrepared(Parser.java:954)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp.query(WebApp.java:1092)
+	at org.h2.server.web.WebApp.process(WebApp.java:241)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:173)
+	at org.h2.server.web.WebServlet.doGet(WebServlet.java:129)
+	at org.h2.server.web.WebServlet.doPost(WebServlet.java:166)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2021-12-03 09:35:26 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO CATEGORIA ('TITULO'[*]) VALUES ('jogo')"; expected "identifier"; SQL statement:
+INSERT INTO categoria ('TITULO') VALUES ('jogo') [42001-200]
+2021-12-03 09:36:16 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column count does not match; SQL statement:
+insert into produto (id, titulo, preco, descricao, imagem, categoria_id) 
+values ('31','FIFA 22', 'Diversos modos de jogo: Modo Carreira, Ultimate team, Pro Clubs e Volta Football. O jogo mais interessante e divertido da Franquia.') [21002-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.command.dml.Insert.prepare(Insert.java:319)
+	at org.h2.command.Parser.prepareCommand(Parser.java:744)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp.query(WebApp.java:1092)
+	at org.h2.server.web.WebApp.process(WebApp.java:241)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:173)
+	at org.h2.server.web.WebServlet.doGet(WebServlet.java:129)
+	at org.h2.server.web.WebServlet.doPost(WebServlet.java:166)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2021-12-03 09:36:28 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column count does not match; SQL statement:
+insert into produto (titulo, preco, descricao, imagem, categoria_id) 
+values ('FIFA 22', 'Diversos modos de jogo: Modo Carreira, Ultimate team, Pro Clubs e Volta Football. O jogo mais interessante e divertido da Franquia.') [21002-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.command.dml.Insert.prepare(Insert.java:319)
+	at org.h2.command.Parser.prepareCommand(Parser.java:744)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp.query(WebApp.java:1092)
+	at org.h2.server.web.WebApp.process(WebApp.java:241)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:173)
+	at org.h2.server.web.WebServlet.doGet(WebServlet.java:129)
+	at org.h2.server.web.WebServlet.doPost(WebServlet.java:166)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2021-12-03 09:42:46 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:W:/CTD/Backend/PICTDBE/ProjetoIntegrador/data/vapordevalvulaepica.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.message.DbException.convert(DbException.java:347)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:93)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2877)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:481)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:402)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:3579)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:170)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:103)
+	at org.h2.engine.Database.getPageStore(Database.java:2659)
+	at org.h2.engine.Database.open(Database.java:675)
+	at org.h2.engine.Database.openDatabase(Database.java:307)
+	at org.h2.engine.Database.<init>(Database.java:301)
+	at org.h2.engine.Engine.openSession(Engine.java:74)
+	at org.h2.engine.Engine.openSession(Engine.java:192)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:171)
+	at org.h2.engine.Engine.createSession(Engine.java:166)
+	at org.h2.engine.Engine.createSession(Engine.java:29)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:340)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.access$100(HikariPool.java:71)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:726)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:712)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.IllegalStateException: The file is locked: nio:W:/CTD/Backend/PICTDBE/ProjetoIntegrador/data/vapordevalvulaepica.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 33 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:W:/CTD/Backend/PICTDBE/ProjetoIntegrador/data/vapordevalvulaepica.mv.db [1.4.200/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:950)
+	at org.h2.mvstore.FileStore.open(FileStore.java:166)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:381)
+	... 27 more
+Caused by: java.nio.channels.OverlappingFileLockException
+	at java.base/sun.nio.ch.FileLockTable.checkList(FileLockTable.java:229)
+	at java.base/sun.nio.ch.FileLockTable.add(FileLockTable.java:123)
+	at java.base/sun.nio.ch.FileChannelImpl.tryLock(FileChannelImpl.java:1297)
+	at org.h2.store.fs.FileNio.tryLock(FilePathNio.java:121)
+	at java.base/java.nio.channels.FileChannel.tryLock(FileChannel.java:1191)
+	at org.h2.mvstore.FileStore.open(FileStore.java:163)
+	... 28 more
+2021-12-03 09:48:25 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column count does not match; SQL statement:
+INSERT INTO categoria VALUES
+('Ação'),
+('RPG'),
+('Estratégia'),
+('Aventura'),
+('Simulador'),
+('Esporte'),
+('Corrida') [21002-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.command.dml.Insert.prepare(Insert.java:319)
+	at org.h2.command.Parser.prepareCommand(Parser.java:744)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp.query(WebApp.java:1092)
+	at org.h2.server.web.WebApp.process(WebApp.java:241)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:173)
+	at org.h2.server.web.WebServlet.doGet(WebServlet.java:129)
+	at org.h2.server.web.WebServlet.doPost(WebServlet.java:166)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2021-12-03 09:51:16 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "      
+
+INSERT INTO PRODUTO VALUES (6, 'Em Original Sin 2 os jogadores podem jogar sozinhos ou com até três outras pessoas em seu grupo. Vários personagens pré-criados com histórias de fundo estão disponíveis para o jogador.', 'https://cdn.akamai.steamstatic.com/steam/apps/435150/header.jpg?t=1607718127', 36.39, 'Divinity: Original Sin 2', 2),
+
+(7, 'New World é situado em meados de 1600, onde os jogadores colonizam uma terra fictícia chamada Aeternum, criada aos moldes da América Britânica, junto ao Oceano Atlântico.', 'https://cdn.cloudflare.steamstatic.com/steam/apps/1063730/capsule_616x353.jpg?t=1637255211', 56.61, 'New World', 2),
+
+(8, 'A história do jogo é ambientada em Night City, um mundo aberto com seis regiões distintas situado no universo da franquia Cyberpunk.', 'https://cdn.cloudflare.steamstatic.com/steam/apps/1091500/capsule_616x353.jpg?t=1621944801', 99.95, 'Cyberpunk 2077' 2[*]),
+
+(9, 'Ambientado em um gigantesco cenário medieval que dá liberdade total ao jogador, o game, que possui uma jogabilidade não linear e é jogado através de uma perspectiva em terceira pessoa, tem o lendário bruxo Geralt de Rívia como seu protagonista.', 'https://cdn.cloudflare.steamstatic.com/steam/apps/292030/header.jpg?t=1621939214', 15.99, 'The Witcher 3: Wild Hunt', 2),
+
+(10, ' Dark Souls III é um jogo do gênero RPG de ação numa perspectiva de terceira pessoa, similar aos jogos anteriores da série.', 'https://cdn.akamai.steamstatic.com/steam/apps/374320/capsule_616x353.jpg?t=1636678210', 79.95, 'Dark Souls III', 2)"; expected "[, ::, AT, FORMAT, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+-- RPG
+
+insert into produto values (6, 'Em Original Sin 2 os jogadores podem jogar sozinhos ou com até três outras pessoas em seu grupo. Vários personagens pré-criados com histórias de fundo estão disponíveis para o jogador.', 'https://cdn.akamai.steamstatic.com/steam/apps/435150/header.jpg?t=1607718127', 36.39, 'Divinity: Original Sin 2', 2),
+
+(7, 'New World é situado em meados de 1600, onde os jogadores colonizam uma terra fictícia chamada Aeternum, criada aos moldes da América Britânica, junto ao Oceano Atlântico.', 'https://cdn.cloudflare.steamstatic.com/steam/apps/1063730/capsule_616x353.jpg?t=1637255211', 56.61, 'New World', 2),
+
+(8, 'A história do jogo é ambientada em Night City, um mundo aberto com seis regiões distintas situado no universo da franquia Cyberpunk.', 'https://cdn.cloudflare.steamstatic.com/steam/apps/1091500/capsule_616x353.jpg?t=1621944801', 99.95, 'Cyberpunk 2077' 2),
+
+(9, 'Ambientado em um gigantesco cenário medieval que dá liberdade total ao jogador, o game, que possui uma jogabilidade não linear e é jogado através de uma perspectiva em terceira pessoa, tem o lendário bruxo Geralt de Rívia como seu protagonista.', 'https://cdn.cloudflare.steamstatic.com/steam/apps/292030/header.jpg?t=1621939214', 15.99, 'The Witcher 3: Wild Hunt', 2),
+
+(10, ' Dark Souls III é um jogo do gênero RPG de ação numa perspectiva de terceira pessoa, similar aos jogos anteriores da série.', 'https://cdn.akamai.steamstatic.com/steam/apps/374320/capsule_616x353.jpg?t=1636678210', 79.95, 'Dark Souls III', 2) [42001-200]
+2021-12-03 09:51:16 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "             
+
+INSERT INTO PRODUTO VALUES (11, 'Os eventos do jogo são ambientados na Idade Média. Entre outras, haverá uma campanha contando uma história sobre a conquista normanda da Inglaterra.', 'https://cdn.akamai.steamstatic.com/steam/apps/1466860/capsule_616x353.jpg?t=1635449761', 199.99, 'Age of Empires IV', 3 ),
+
+(12, 'Civilization VI é um jogo eletrônico desenvolvido pela Firaxis Games e pela 2K Games. É a sequência de Civilization V, apresentando diferenças tanto nos gráficos quanto na interface com o seu novo motor gráfico.', 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/clans/25030453/2e2da05a9fa3376b93568fa02044c15b92a5eba7.jpg', 19.35, 'Sid Meiers Civilization VI' 3[*]),
+
+(13, 'É um jogo eletrônico de estratégia por turnos desenvolvido pela Creative Assembly e publicado pela Sega. O game é ambientado no mundo Warhammer Fantasy da Games Workshop.', 'https://cdn.akamai.steamstatic.com/steam/apps/594570/header.jpg?t=1632304425', 85.68, 'Total War: WARHAMMER II', 3),
+
+(14, 'Em XCOM 2 a história acontece 20 anos depois dos eventos ocorrido em XCOM: Enemy Unknown (2012), depois do XCOM ter perdido a guerra contra as forças alienígenas.', 'https://cdn.cloudflare.steamstatic.com/steam/apps/268500/header.jpg?t=1600177724', 9.99, 'XCOM 2', 3),
+
+(15, 'Darkest Dungeon faz com que o jogador gerencie uma lista de heróis para explorar masmorras abaixo de uma mansão gótica que o jogador herdou. Jogado em uma mistura de movimento em tempo real e combate baseado em turnos.', 'https://cdn.cloudflare.steamstatic.com/steam/apps/262060/header.jpg?t=1618936132', 6.89, 'Darkest Dungeon', 3)"; expected "[, ::, AT, FORMAT, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+-- Estratégia
+
+insert into produto values (11, 'Os eventos do jogo são ambientados na Idade Média. Entre outras, haverá uma campanha contando uma história sobre a conquista normanda da Inglaterra.', 'https://cdn.akamai.steamstatic.com/steam/apps/1466860/capsule_616x353.jpg?t=1635449761', 199.99, 'Age of Empires IV', 3 ),
+
+(12, 'Civilization VI é um jogo eletrônico desenvolvido pela Firaxis Games e pela 2K Games. É a sequência de Civilization V, apresentando diferenças tanto nos gráficos quanto na interface com o seu novo motor gráfico.', 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/clans/25030453/2e2da05a9fa3376b93568fa02044c15b92a5eba7.jpg', 19.35, 'Sid Meiers Civilization VI' 3),
+
+(13, 'É um jogo eletrônico de estratégia por turnos desenvolvido pela Creative Assembly e publicado pela Sega. O game é ambientado no mundo Warhammer Fantasy da Games Workshop.', 'https://cdn.akamai.steamstatic.com/steam/apps/594570/header.jpg?t=1632304425', 85.68, 'Total War: WARHAMMER II', 3),
+
+(14, 'Em XCOM 2 a história acontece 20 anos depois dos eventos ocorrido em XCOM: Enemy Unknown (2012), depois do XCOM ter perdido a guerra contra as forças alienígenas.', 'https://cdn.cloudflare.steamstatic.com/steam/apps/268500/header.jpg?t=1600177724', 9.99, 'XCOM 2', 3),
+
+(15, 'Darkest Dungeon faz com que o jogador gerencie uma lista de heróis para explorar masmorras abaixo de uma mansão gótica que o jogador herdou. Jogado em uma mistura de movimento em tempo real e combate baseado em turnos.', 'https://cdn.cloudflare.steamstatic.com/steam/apps/262060/header.jpg?t=1618936132', 6.89, 'Darkest Dungeon', 3) [42001-200]
+2021-12-03 09:52:28 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO PRODUTO VALUES (6, 'Em Original Sin 2 os jogadores podem jogar sozinhos ou com até três outras pessoas em seu grupo. Vários personagens pré-criados com histórias de fundo estão disponíveis para o jogador.', 'https://cdn.akamai.steamstatic.com/steam/apps/435150/header.jpg?t=1607718127', 36.39, 'Divinity: Original Sin 2', 2),
+
+(7, 'New World é situado em meados de 1600, onde os jogadores colonizam uma terra fictícia chamada Aeternum, criada aos moldes da América Britânica, junto ao Oceano Atlântico.', 'https://cdn.cloudflare.steamstatic.com/steam/apps/1063730/capsule_616x353.jpg?t=1637255211', 56.61, 'New World', 2),
+
+(8, 'A história do jogo é ambientada em Night City, um mundo aberto com seis regiões distintas situado no universo da franquia Cyberpunk.', 'https://cdn.cloudflare.steamstatic.com/steam/apps/1091500/capsule_616x353.jpg?t=1621944801', 99.95, 'Cyberpunk 2077' 2[*]),
+
+(9, 'Ambientado em um gigantesco cenário medieval que dá liberdade total ao jogador, o game, que possui uma jogabilidade não linear e é jogado através de uma perspectiva em terceira pessoa, tem o lendário bruxo Geralt de Rívia como seu protagonista.', 'https://cdn.cloudflare.steamstatic.com/steam/apps/292030/header.jpg?t=1621939214', 15.99, 'The Witcher 3: Wild Hunt', 2),
+
+(10, ' Dark Souls III é um jogo do gênero RPG de ação numa perspectiva de terceira pessoa, similar aos jogos anteriores da série.', 'https://cdn.akamai.steamstatic.com/steam/apps/374320/capsule_616x353.jpg?t=1636678210', 79.95, 'Dark Souls III', 2)"; expected "[, ::, AT, FORMAT, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+insert into produto values (6, 'Em Original Sin 2 os jogadores podem jogar sozinhos ou com até três outras pessoas em seu grupo. Vários personagens pré-criados com histórias de fundo estão disponíveis para o jogador.', 'https://cdn.akamai.steamstatic.com/steam/apps/435150/header.jpg?t=1607718127', 36.39, 'Divinity: Original Sin 2', 2),
+
+(7, 'New World é situado em meados de 1600, onde os jogadores colonizam uma terra fictícia chamada Aeternum, criada aos moldes da América Britânica, junto ao Oceano Atlântico.', 'https://cdn.cloudflare.steamstatic.com/steam/apps/1063730/capsule_616x353.jpg?t=1637255211', 56.61, 'New World', 2),
+
+(8, 'A história do jogo é ambientada em Night City, um mundo aberto com seis regiões distintas situado no universo da franquia Cyberpunk.', 'https://cdn.cloudflare.steamstatic.com/steam/apps/1091500/capsule_616x353.jpg?t=1621944801', 99.95, 'Cyberpunk 2077' 2),
+
+(9, 'Ambientado em um gigantesco cenário medieval que dá liberdade total ao jogador, o game, que possui uma jogabilidade não linear e é jogado através de uma perspectiva em terceira pessoa, tem o lendário bruxo Geralt de Rívia como seu protagonista.', 'https://cdn.cloudflare.steamstatic.com/steam/apps/292030/header.jpg?t=1621939214', 15.99, 'The Witcher 3: Wild Hunt', 2),
+
+(10, ' Dark Souls III é um jogo do gênero RPG de ação numa perspectiva de terceira pessoa, similar aos jogos anteriores da série.', 'https://cdn.akamai.steamstatic.com/steam/apps/374320/capsule_616x353.jpg?t=1636678210', 79.95, 'Dark Souls III', 2) [42001-200]
+2021-12-03 09:52:28 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO PRODUTO VALUES (11, 'Os eventos do jogo são ambientados na Idade Média. Entre outras, haverá uma campanha contando uma história sobre a conquista normanda da Inglaterra.', 'https://cdn.akamai.steamstatic.com/steam/apps/1466860/capsule_616x353.jpg?t=1635449761', 199.99, 'Age of Empires IV', 3 ),
+
+(12, 'Civilization VI é um jogo eletrônico desenvolvido pela Firaxis Games e pela 2K Games. É a sequência de Civilization V, apresentando diferenças tanto nos gráficos quanto na interface com o seu novo motor gráfico.', 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/clans/25030453/2e2da05a9fa3376b93568fa02044c15b92a5eba7.jpg', 19.35, 'Sid Meiers Civilization VI' 3[*]),
+
+(13, 'É um jogo eletrônico de estratégia por turnos desenvolvido pela Creative Assembly e publicado pela Sega. O game é ambientado no mundo Warhammer Fantasy da Games Workshop.', 'https://cdn.akamai.steamstatic.com/steam/apps/594570/header.jpg?t=1632304425', 85.68, 'Total War: WARHAMMER II', 3),
+
+(14, 'Em XCOM 2 a história acontece 20 anos depois dos eventos ocorrido em XCOM: Enemy Unknown (2012), depois do XCOM ter perdido a guerra contra as forças alienígenas.', 'https://cdn.cloudflare.steamstatic.com/steam/apps/268500/header.jpg?t=1600177724', 9.99, 'XCOM 2', 3),
+
+(15, 'Darkest Dungeon faz com que o jogador gerencie uma lista de heróis para explorar masmorras abaixo de uma mansão gótica que o jogador herdou. Jogado em uma mistura de movimento em tempo real e combate baseado em turnos.', 'https://cdn.cloudflare.steamstatic.com/steam/apps/262060/header.jpg?t=1618936132', 6.89, 'Darkest Dungeon', 3)"; expected "[, ::, AT, FORMAT, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+insert into produto values (11, 'Os eventos do jogo são ambientados na Idade Média. Entre outras, haverá uma campanha contando uma história sobre a conquista normanda da Inglaterra.', 'https://cdn.akamai.steamstatic.com/steam/apps/1466860/capsule_616x353.jpg?t=1635449761', 199.99, 'Age of Empires IV', 3 ),
+
+(12, 'Civilization VI é um jogo eletrônico desenvolvido pela Firaxis Games e pela 2K Games. É a sequência de Civilization V, apresentando diferenças tanto nos gráficos quanto na interface com o seu novo motor gráfico.', 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/clans/25030453/2e2da05a9fa3376b93568fa02044c15b92a5eba7.jpg', 19.35, 'Sid Meiers Civilization VI' 3),
+
+(13, 'É um jogo eletrônico de estratégia por turnos desenvolvido pela Creative Assembly e publicado pela Sega. O game é ambientado no mundo Warhammer Fantasy da Games Workshop.', 'https://cdn.akamai.steamstatic.com/steam/apps/594570/header.jpg?t=1632304425', 85.68, 'Total War: WARHAMMER II', 3),
+
+(14, 'Em XCOM 2 a história acontece 20 anos depois dos eventos ocorrido em XCOM: Enemy Unknown (2012), depois do XCOM ter perdido a guerra contra as forças alienígenas.', 'https://cdn.cloudflare.steamstatic.com/steam/apps/268500/header.jpg?t=1600177724', 9.99, 'XCOM 2', 3),
+
+(15, 'Darkest Dungeon faz com que o jogador gerencie uma lista de heróis para explorar masmorras abaixo de uma mansão gótica que o jogador herdou. Jogado em uma mistura de movimento em tempo real e combate baseado em turnos.', 'https://cdn.cloudflare.steamstatic.com/steam/apps/262060/header.jpg?t=1618936132', 6.89, 'Darkest Dungeon', 3) [42001-200]
+2021-12-03 09:52:53 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO PRODUTO VALUES
+
+(7, 'New World é situado em meados de 1600, onde os jogadores colonizam uma terra fictícia chamada Aeternum, criada aos moldes da América Britânica, junto ao Oceano Atlântico.', 'https://cdn.cloudflare.steamstatic.com/steam/apps/1063730/capsule_616x353.jpg?t=1637255211', 56.61, 'New World', 2),[*]"; expected "ROW, (, DEFAULT, NOT, EXISTS, INTERSECTS, UNIQUE"; SQL statement:
+insert into produto values
+
+(7, 'New World é situado em meados de 1600, onde os jogadores colonizam uma terra fictícia chamada Aeternum, criada aos moldes da América Britânica, junto ao Oceano Atlântico.', 'https://cdn.cloudflare.steamstatic.com/steam/apps/1063730/capsule_616x353.jpg?t=1637255211', 56.61, 'New World', 2), [42001-200]
+2021-12-03 09:52:57 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO PRODUTO VALUES (7, 'New World é situado em meados de 1600, onde os jogadores colonizam uma terra fictícia chamada Aeternum, criada aos moldes da América Britânica, junto ao Oceano Atlântico.', 'https://cdn.cloudflare.steamstatic.com/steam/apps/1063730/capsule_616x353.jpg?t=1637255211', 56.61, 'New World', 2),[*]"; expected "ROW, (, DEFAULT, NOT, EXISTS, INTERSECTS, UNIQUE"; SQL statement:
+insert into produto values (7, 'New World é situado em meados de 1600, onde os jogadores colonizam uma terra fictícia chamada Aeternum, criada aos moldes da América Britânica, junto ao Oceano Atlântico.', 'https://cdn.cloudflare.steamstatic.com/steam/apps/1063730/capsule_616x353.jpg?t=1637255211', 56.61, 'New World', 2), [42001-200]
+2021-12-03 09:53:57 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO PRODUTO VALUES
+(8, 'A história do jogo é ambientada em Night City, um mundo aberto com seis regiões distintas situado no universo da franquia Cyberpunk.', 'https://cdn.cloudflare.steamstatic.com/steam/apps/1091500/capsule_616x353.jpg?t=1621944801', 99.95, 'Cyberpunk 2077' 2[*])"; expected "[, ::, AT, FORMAT, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+insert into produto values
+(8, 'A história do jogo é ambientada em Night City, um mundo aberto com seis regiões distintas situado no universo da franquia Cyberpunk.', 'https://cdn.cloudflare.steamstatic.com/steam/apps/1091500/capsule_616x353.jpg?t=1621944801', 99.95, 'Cyberpunk 2077' 2) [42001-200]
+2021-12-03 09:54:08 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO PRODUTO VALUES (8, 'A história do jogo é ambientada em Night City, um mundo aberto com seis regiões distintas situado no universo da franquia Cyberpunk.', 'https://cdn.cloudflare.steamstatic.com/steam/apps/1091500/capsule_616x353.jpg?t=1621944801', 99.95, 'Cyberpunk 2077' 2[*])"; expected "[, ::, AT, FORMAT, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+insert into produto values (8, 'A história do jogo é ambientada em Night City, um mundo aberto com seis regiões distintas situado no universo da franquia Cyberpunk.', 'https://cdn.cloudflare.steamstatic.com/steam/apps/1091500/capsule_616x353.jpg?t=1621944801', 99.95, 'Cyberpunk 2077' 2) [42001-200]
+2021-12-03 09:54:36 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO PRODUTO VALUES (11, 'Os eventos do jogo são ambientados na Idade Média. Entre outras, haverá uma campanha contando uma história sobre a conquista normanda da Inglaterra.', 'https://cdn.akamai.steamstatic.com/steam/apps/1466860/capsule_616x353.jpg?t=1635449761', 199.99, 'Age of Empires IV', 3 ),
+
+(12, 'Civilization VI é um jogo eletrônico desenvolvido pela Firaxis Games e pela 2K Games. É a sequência de Civilization V, apresentando diferenças tanto nos gráficos quanto na interface com o seu novo motor gráfico.', 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/clans/25030453/2e2da05a9fa3376b93568fa02044c15b92a5eba7.jpg', 19.35, 'Sid Meiers Civilization VI' 3[*]),
+
+(13, 'É um jogo eletrônico de estratégia por turnos desenvolvido pela Creative Assembly e publicado pela Sega. O game é ambientado no mundo Warhammer Fantasy da Games Workshop.', 'https://cdn.akamai.steamstatic.com/steam/apps/594570/header.jpg?t=1632304425', 85.68, 'Total War: WARHAMMER II', 3),
+
+(14, 'Em XCOM 2 a história acontece 20 anos depois dos eventos ocorrido em XCOM: Enemy Unknown (2012), depois do XCOM ter perdido a guerra contra as forças alienígenas.', 'https://cdn.cloudflare.steamstatic.com/steam/apps/268500/header.jpg?t=1600177724', 9.99, 'XCOM 2', 3),
+
+(15, 'Darkest Dungeon faz com que o jogador gerencie uma lista de heróis para explorar masmorras abaixo de uma mansão gótica que o jogador herdou. Jogado em uma mistura de movimento em tempo real e combate baseado em turnos.', 'https://cdn.cloudflare.steamstatic.com/steam/apps/262060/header.jpg?t=1618936132', 6.89, 'Darkest Dungeon', 3)"; expected "[, ::, AT, FORMAT, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+insert into produto values (11, 'Os eventos do jogo são ambientados na Idade Média. Entre outras, haverá uma campanha contando uma história sobre a conquista normanda da Inglaterra.', 'https://cdn.akamai.steamstatic.com/steam/apps/1466860/capsule_616x353.jpg?t=1635449761', 199.99, 'Age of Empires IV', 3 ),
+
+(12, 'Civilization VI é um jogo eletrônico desenvolvido pela Firaxis Games e pela 2K Games. É a sequência de Civilization V, apresentando diferenças tanto nos gráficos quanto na interface com o seu novo motor gráfico.', 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/clans/25030453/2e2da05a9fa3376b93568fa02044c15b92a5eba7.jpg', 19.35, 'Sid Meiers Civilization VI' 3),
+
+(13, 'É um jogo eletrônico de estratégia por turnos desenvolvido pela Creative Assembly e publicado pela Sega. O game é ambientado no mundo Warhammer Fantasy da Games Workshop.', 'https://cdn.akamai.steamstatic.com/steam/apps/594570/header.jpg?t=1632304425', 85.68, 'Total War: WARHAMMER II', 3),
+
+(14, 'Em XCOM 2 a história acontece 20 anos depois dos eventos ocorrido em XCOM: Enemy Unknown (2012), depois do XCOM ter perdido a guerra contra as forças alienígenas.', 'https://cdn.cloudflare.steamstatic.com/steam/apps/268500/header.jpg?t=1600177724', 9.99, 'XCOM 2', 3),
+
+(15, 'Darkest Dungeon faz com que o jogador gerencie uma lista de heróis para explorar masmorras abaixo de uma mansão gótica que o jogador herdou. Jogado em uma mistura de movimento em tempo real e combate baseado em turnos.', 'https://cdn.cloudflare.steamstatic.com/steam/apps/262060/header.jpg?t=1618936132', 6.89, 'Darkest Dungeon', 3) [42001-200]
+2021-12-03 09:54:54 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO PRODUTO VALUES (11, 'Os eventos do jogo são ambientados na Idade Média. Entre outras, haverá uma campanha contando uma história sobre a conquista normanda da Inglaterra.', 'https://cdn.akamai.steamstatic.com/steam/apps/1466860/capsule_616x353.jpg?t=1635449761', 199.99, 'Age of Empires IV', 3 ),
+
+(12, 'Civilization VI é um jogo eletrônico desenvolvido pela Firaxis Games e pela 2K Games. É a sequência de Civilization V, apresentando diferenças tanto nos gráficos quanto na interface com o seu novo motor gráfico.', 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/clans/25030453/2e2da05a9fa3376b93568fa02044c15b92a5eba7.jpg', 19.35, 'Sid Meiers Civilization VI' 3[*]),
+
+(13, 'É um jogo eletrônico de estratégia por turnos desenvolvido pela Creative Assembly e publicado pela Sega. O game é ambientado no mundo Warhammer Fantasy da Games Workshop.', 'https://cdn.akamai.steamstatic.com/steam/apps/594570/header.jpg?t=1632304425', 85.68, 'Total War: WARHAMMER II', 3),
+
+(14, 'Em XCOM 2 a história acontece 20 anos depois dos eventos ocorrido em XCOM: Enemy Unknown (2012), depois do XCOM ter perdido a guerra contra as forças alienígenas.', 'https://cdn.cloudflare.steamstatic.com/steam/apps/268500/header.jpg?t=1600177724', 9.99, 'XCOM 2', 3),
+
+(15, 'Darkest Dungeon faz com que o jogador gerencie uma lista de heróis para explorar masmorras abaixo de uma mansão gótica que o jogador herdou. Jogado em uma mistura de movimento em tempo real e combate baseado em turnos.', 'https://cdn.cloudflare.steamstatic.com/steam/apps/262060/header.jpg?t=1618936132', 6.89, 'Darkest Dungeon', 3)"; expected "[, ::, AT, FORMAT, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+insert into produto values (11, 'Os eventos do jogo são ambientados na Idade Média. Entre outras, haverá uma campanha contando uma história sobre a conquista normanda da Inglaterra.', 'https://cdn.akamai.steamstatic.com/steam/apps/1466860/capsule_616x353.jpg?t=1635449761', 199.99, 'Age of Empires IV', 3 ),
+
+(12, 'Civilization VI é um jogo eletrônico desenvolvido pela Firaxis Games e pela 2K Games. É a sequência de Civilization V, apresentando diferenças tanto nos gráficos quanto na interface com o seu novo motor gráfico.', 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/clans/25030453/2e2da05a9fa3376b93568fa02044c15b92a5eba7.jpg', 19.35, 'Sid Meiers Civilization VI' 3),
+
+(13, 'É um jogo eletrônico de estratégia por turnos desenvolvido pela Creative Assembly e publicado pela Sega. O game é ambientado no mundo Warhammer Fantasy da Games Workshop.', 'https://cdn.akamai.steamstatic.com/steam/apps/594570/header.jpg?t=1632304425', 85.68, 'Total War: WARHAMMER II', 3),
+
+(14, 'Em XCOM 2 a história acontece 20 anos depois dos eventos ocorrido em XCOM: Enemy Unknown (2012), depois do XCOM ter perdido a guerra contra as forças alienígenas.', 'https://cdn.cloudflare.steamstatic.com/steam/apps/268500/header.jpg?t=1600177724', 9.99, 'XCOM 2', 3),
+
+(15, 'Darkest Dungeon faz com que o jogador gerencie uma lista de heróis para explorar masmorras abaixo de uma mansão gótica que o jogador herdou. Jogado em uma mistura de movimento em tempo real e combate baseado em turnos.', 'https://cdn.cloudflare.steamstatic.com/steam/apps/262060/header.jpg?t=1618936132', 6.89, 'Darkest Dungeon', 3) [42001-200]
